@@ -1,7 +1,7 @@
 <?php
     include('./data/Movie.php');
 
-    $lifeOfPi = new Movie('Life of pi', '2h 7m', 'Adventure / Drama',  2012,  'United States of America');
+    $lifeOfPi = new Movie('Life of pi', '2h 7m', 'Adventure / Drama',  '2012',  'United States of America');
 
     $vacation = new Movie('Vacation', '1h 39m', 'Comedy / Adventure',  2015,  'United States of America');
 ?>

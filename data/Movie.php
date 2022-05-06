@@ -7,13 +7,18 @@ class Movie {
     public $yearOfRelease;
     public $countryOfProduction;
 
-    function _construct($name, $duration, $genre, $yearOfRelease, $countryOfProduction){
+    function __construct($name, $duration, $genre, $yearOfRelease, $countryOfProduction){
         $this->name = $name;
         $this->duration = $duration;
         $this->genre = $genre;
-        $this->yearOfRelease = $yearOfRelease;
+        $this->setYearOfRelease($yearOfRelease);
         $this->countryOfProduction = $countryOfProduction;
     }
 
+    public function setYearOfRelease($yearOfRelease){
+        if ($yearOfRelease !== null && !is_string($yearOfRelease)) {
+            $this->yearOfRelease = $yearOfRelease;
+        }
+    }
 }
 ?>
